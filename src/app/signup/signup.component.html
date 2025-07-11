@@ -1,0 +1,41 @@
+<div class="signupForm">
+    <div>
+        <h3> Sign Up </h3>
+    </div>
+    <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+        <div class="form-group">
+            <input type="text" name="username" id="username" 
+                class="form-control" formControlName="username" placeholder="Full Name">
+        </div>
+        <div class="form-group">
+            <input type="email" name="email" id="email" class="form-control" formControlName="email" 
+            placeholder="Email">
+        </div>
+        <div class="form-group">
+            <input type="password" name="pwd" id="pwd" 
+                class="form-control" formControlName="pwd" placeholder="Password" 
+                autocomplete="false">
+        </div>
+        <div>
+            <div *ngIf="signupForm.controls.pwd.errors">
+                <div class="text-info">
+                    Password length should be b/w 8-12
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="password" name="cpwd" id="cpwd" 
+                class="form-control" formControlName="cpwd" placeholder="Confirm Password" 
+                autocomplete="false">
+        </div>
+        <div class="text-danger">
+            {{errorMsg()}}
+        </div>
+        <div class="button">
+            <button mat-flat-button type="submit" [disabled]="signupForm.valid"> Sign Up</button>
+        </div>
+    </form>
+    <div class="button">
+       If you are already registered, then <button type="button" mat-button (click)="login()"> Login </button>
+    </div>
+</div>

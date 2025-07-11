@@ -1,0 +1,19 @@
+<nav class="navbar" style="background-color: #e3f2fd;">
+  <div class="container-fluid">
+    <div class="title">Expense Tracker</div>
+    <div>
+      <!-- <span>
+        <button class="btn btn-primary" (click)="new()">New</button>
+      </span> -->
+      <span>
+        <button mat-stroked-button (click)="login()">Login</button>
+      </span>
+      <span>
+        <button mat-stroked-button (click)="new()"> Home </button>
+      </span>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+  <router-outlet></router-outlet>
+</div>

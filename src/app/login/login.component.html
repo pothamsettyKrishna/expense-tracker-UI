@@ -1,0 +1,22 @@
+<div class="loginForm">
+    <div>
+        <h3> Login </h3>
+    </div>
+    <form [formGroup]="loginForm">
+        <div class="form-group">
+            <input type="text" name="email" id="email" 
+                class="form-control" formControlName="email" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <input type="password" name="pwd" id="pwd" 
+                class="form-control" formControlName="pwd" placeholder="*********" 
+                autocomplete="false">
+        </div>
+        <div class="button">
+            <button mat-flat-button type="submit" [disabled]="!loginForm.valid">Login</button>
+        </div>
+    </form>
+    <div class="button">
+        New User? <button type="button" mat-button (click)="signUp()"> SIGN UP</button>
+    </div>
+</div>

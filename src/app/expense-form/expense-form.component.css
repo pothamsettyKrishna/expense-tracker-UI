@@ -1,0 +1,29 @@
+.expenseform{
+    padding-top: 1%;
+    padding-right: 30%;
+    padding-left: 30%;
+}
+
+.card {
+  width: 30rem;
+}
+
+.form-group {
+    padding: 5px;
+}
+
+.expensesTable{
+  width: 100%;
+  padding: 0%;
+}
+
+@media only screen and (max-width: 1032px) {
+    .expenseform {
+        padding-left: 0%;
+        padding-right: 0%;
+      }
+      
+    .card {
+      width: auto;
+    }
+  }
